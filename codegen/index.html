@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code Generator</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" type="text/css" href="css/prism.css">
+	<script type="text/javascript" src="js/prism.js"></script> -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$("#frm").submit(function(event){
+				event.preventDefault();
+			});
+			$("#btnGen").on("click",function(){
+				doGen();
+			});
+			$("#btnCopy").on("click",function(){
+				doCopy();
+			});
+			$("#btnClear").on("click",function(){
+				doNew();
+				$("#codegens").hide();
+			});
+			$("#btnAdd").on("click",function(){
+				doAdd();
+			});
+
+			$("#btncleargen").on("click",function(){
+				$("#gens").val("");
+			});
+
+			$("#btnClose").on("click",function(){
+				$("#inputCode").html("");
+				$("#gens").val("");
+				$("#codegens").hide();	
+			});
+			
+			$("#codegens").hide();
+		});
+
+		function genClearBtn()
+		{
+			$('input').wrap('<span class="deleteicon" />').after($('<span class="fa fa-times" />').click(function() {
+                $(this).prev('input').val('').trigger('change').focus();
+            }));
+		}
+
+		function doAdd()
+		{
+			var currCode = $("#gens").val();
+			var regGlob = /(\_@.*?\_@)/gi;
+			var reg = /(\_@.*?\_@)/;
+			var code = $("#code").val();
+			var count = (code.match(regGlob) || []).length;
+			var inps = document.getElementsByName('pname[]');
+			var codeToAdd = code;
+			for (var i = 0; i <inps.length; i++) {
+			var inp=inps[i];
+			    //alert("pname["+i+"].value="+inp.value);
+			    var test = codeToAdd.replace(reg,inp.value);
+			    codeToAdd = test;
+			}
+			var genVal = $("#gens").val();
+			$("#gens").val(genVal+"\n"+codeToAdd);
+
+			//scroll
+			var psconsole = $('#gens');
+		    if(psconsole.length)
+		       psconsole.scrollTop(psconsole[0].scrollHeight - psconsole.height());
+		}
+		function doNew(){
+			$("#code").val("");
+			$("#gens").val("");	
+			$("#inputCode").html("");
+			$("#codegens").hide();
+		}
+
+		function doGen(){			
+			var regGlob = /(\_@.*?\_@)/gi;
+			var reg = /(\_@.*?\_@)/;
+			var code = $("#code").val();
+			//var test = code.replace(reg,"xxx");
+			$("#codegens").show();
+			var count = (code.match(regGlob) || []).length;
+			for(i=1;i<=count;i++)
+			{
+				$("#inputCode").append('<input type="text" placeholder="Enter value '+i+'" class="form-control" name="pname[]" /><br>');
+			}
+			genClearBtn();
+		}
+		function doCopy(){			
+			var copyText = document.getElementById("gens");
+  			copyText.select();
+  			document.execCommand("Copy");
+  			alert("Copy success");
+		}
+	</script>
+	<style type="text/css">
+		#gens{
+			background: #eee;
+			border: 2px solid #ddd;
+			border-radius: 5px;
+			padding: 2px;
+		}
+
+		span.deleteicon {
+            position: relative;
+        }
+        span.deleteicon span {
+        	float: right;
+            position: relative;
+            display: inline;
+            color: #777;
+            top: -27px;
+            right: 3px;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+        span.deleteicon input {
+            padding-right: 16px;
+            box-sizing: border-box;
+        }
+	</style>
+</head>
+<body>
+	<div style="margin-top: 20px;"></div>
+	<div class="container-fluid">
+		<div class="row">
+		<div class="col-md-6 col-lg-6">
+		<form id="frm">
+			<div class="form-group">
+				<label>Enter code here</label>
+				<textarea name="code" id="code" rows="15" class="form-control"></textarea>
+			</div>
+			<div class="form-group">
+				<button id="btnClear" name="btnClear" class="btn btn-primary">NEW</button>
+				<button id="btnGen" name="btnGen" class="btn btn-primary float-right">GENERATE</button>
+			</div>
+		</form>
+		<br /><br />
+		</div>	
+		<div class="col-md-6 col-lg-6">
+		<div id="codegens">
+			<label>Output Pane</label>
+			<div id="inputCode">
+
+			</div>
+			<button id="btnAdd" class="btn btn-primary btn-sm">ADD</button>
+			<button id="btnCopy" class="btn btn-primary btn-sm float-right">COPY</button>
+			<br><br>
+			<textarea id="gens" class="form-control" rows="10" readonly></textarea><br>
+			<button id="btncleargen" class="btn btn-primary btn-sm">Clear</button>
+			<button id="btnClose" class="btn btn-primary btn-sm">Clear & Close</button>
+		</div>
+	</div>
+	</div>
+	</div><br><br>
+</body>
+</html>

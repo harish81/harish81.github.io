@@ -178,20 +178,41 @@ $(document).ready(function() {
             select2_data += item.text + "#";
         });
         select2_data = select2_data.substr(0, select2_data.length - 1);
-
-        var newVideo = firebase.database().ref().child('videos').push();
-        var vid_data = {
-            id: newVideo.key,
-            title: $("#vi_title").val(),
-            video_id: $("#vi_video_id").val(),
-            player: select2_data,
-            tags: $("#vi_tags").val().replace(/,/g, '#'),
-            ad_date: moment().format('YYYY-MM-DD hh:mm A')
-        };
-        newVideo.set(vid_data).then(function(snapshot) {
-            swal("Good job!", "New video inserted!", "success");
-            get_data();
+        
+        firebase.database().ref('videos').once('value').then(function(snapshot) {
+            var is_data_exists=false;
+            snapshot.forEach(function(childSnapshot) {
+                var childData = childSnapshot.val();
+                if(childData.video_id == $("#vi_video_id").val().trim()){
+                    is_data_exists=true;
+                }
+            });
+            if(is_data_exists){
+                swal("Error!", "The video already exists!", "error");
+            }
+            else{
+                
+                    var newVideo = firebase.database().ref().child('videos').push();
+                    var vid_data = {
+                        id: newVideo.key,
+                        title: $("#vi_title").val(),
+                        video_id: $("#vi_video_id").val(),
+                        player: select2_data,
+                        tags: $("#vi_tags").val().replace(/,/g, '#'),
+                        ad_date: moment().format('YYYY-MM-DD hh:mm A')
+                    };
+                    newVideo.set(vid_data).then(function(snapshot) {
+                        swal("Good job!", "New video inserted!", "success");
+                        get_data();
+                    });
+                            
+                
+            }
         });
+        
+        /*
+        
+        */
         return false;
     });
 });

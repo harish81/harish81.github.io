@@ -105,7 +105,9 @@ function get_data() {
         });
 
     });
-
+    //datatable
+    $('#tbl_pl').DataTable();
+    $('#tbl_vi').DataTable();
 }
 
 var config = {
@@ -125,10 +127,6 @@ $(document).ready(function() {
     $('#sel2_player').select2({
         placeholder: "Select a players"
     });
-    
-    //datatable
-    $('#tbl_pl').DataTable();
-    $('#tbl_vi').DataTable();
 
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {

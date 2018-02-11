@@ -127,7 +127,8 @@ $(document).ready(function() {
     });
     
     //datatable
-    $('table').DataTable();
+    $('#tbl_pl').DataTable();
+    $('#tbl_vi').DataTable();
 
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {

@@ -1,3 +1,4 @@
+window.eval=function(){};
 function del_pl(id) {
     swal({
             title: "Are you sure?",

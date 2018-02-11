@@ -125,6 +125,9 @@ $(document).ready(function() {
     $('#sel2_player').select2({
         placeholder: "Select a players"
     });
+    
+    //datatable
+    $('table').DataTable();
 
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {

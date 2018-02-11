@@ -75,7 +75,7 @@ function get_data() {
             });
 
         });
-
+        $('#tbl_pl').DataTable();
     });
 
     //get all videos
@@ -103,11 +103,8 @@ function get_data() {
             });
 
         });
-
-    });
-    //datatable
-    $('#tbl_pl').DataTable();
-    $('#tbl_vi').DataTable();
+        $('#tbl_vi').DataTable();
+    });    
 }
 
 var config = {

@@ -190,8 +190,9 @@ $(document).ready(function() {
             if(is_data_exists){
                 swal("Error!", "The video already exists!", "error");
             }
-            else{
-                
+            else{ 
+                alert('ok');
+                /*
                     var newVideo = firebase.database().ref().child('videos').push();
                     var vid_data = {
                         id: newVideo.key,
@@ -205,7 +206,7 @@ $(document).ready(function() {
                         swal("Good job!", "New video inserted!", "success");
                         get_data();
                     });
-                            
+                    */        
                 
             }
         });

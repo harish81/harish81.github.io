@@ -1,1 +1,214 @@
-var _0x3295=["\x72\x65\x6D\x6F\x76\x65","\x63\x68\x69\x6C\x64","\x70\x6C\x61\x79\x65\x72\x73","\x72\x65\x66","\x64\x61\x74\x61\x62\x61\x73\x65","\x50\x6C\x61\x79\x65\x72\x20\x68\x61\x73\x20\x62\x65\x65\x6E\x20\x64\x65\x6C\x65\x74\x65\x64\x21","\x73\x75\x63\x63\x65\x73\x73","\x74\x68\x65\x6E","\x41\x72\x65\x20\x79\x6F\x75\x20\x73\x75\x72\x65\x3F","\x4F\x6E\x63\x65\x20\x64\x65\x6C\x65\x74\x65\x64\x2C\x20\x79\x6F\x75\x20\x77\x69\x6C\x6C\x20\x6E\x6F\x74\x20\x62\x65\x20\x61\x62\x6C\x65\x20\x74\x6F\x20\x72\x65\x63\x6F\x76\x65\x72\x20\x74\x68\x69\x73\x20\x50\x6C\x61\x79\x65\x72\x21","\x77\x61\x72\x6E\x69\x6E\x67","\x76\x69\x64\x65\x6F\x73","\x56\x69\x64\x65\x6F\x20\x68\x61\x73\x20\x62\x65\x65\x6E\x20\x64\x65\x6C\x65\x74\x65\x64\x21","\x4F\x6E\x63\x65\x20\x64\x65\x6C\x65\x74\x65\x64\x2C\x20\x79\x6F\x75\x20\x77\x69\x6C\x6C\x20\x6E\x6F\x74\x20\x62\x65\x20\x61\x62\x6C\x65\x20\x74\x6F\x20\x72\x65\x63\x6F\x76\x65\x72\x20\x74\x68\x69\x73\x20\x56\x69\x64\x65\x6F\x21","","\x76\x61\x6C","\x6E\x61\x6D\x65","\x70\x75\x73\x68","\x3C\x74\x72\x3E","\x3C\x74\x64\x20\x63\x6C\x61\x73\x73\x3D\x27\x65\x6C\x69\x70\x27\x20\x64\x61\x74\x61\x2D\x74\x6F\x67\x67\x6C\x65\x3D\x27\x74\x6F\x6F\x6C\x74\x69\x70\x27\x20\x74\x69\x74\x6C\x65\x3D\x27","\x69\x64","\x27\x3E","\x3C\x2F\x74\x64\x3E","\x3C\x74\x64\x3E","\x3C\x74\x64\x3E\x3C\x69\x6D\x67\x20\x63\x6C\x61\x73\x73\x3D\x27\x69\x6D\x67\x2D\x72\x65\x73\x70\x6F\x6E\x73\x69\x76\x65\x27\x20\x77\x69\x64\x74\x68\x3D\x39\x30\x20\x73\x72\x63\x3D\x27","\x69\x6D\x67\x55\x72\x6C","\x27\x20\x2F\x3E\x3C\x2F\x74\x64\x3E","\x3C\x74\x64\x3E\x3C\x61\x20\x68\x72\x65\x66\x3D\x27\x6A\x61\x76\x61\x73\x63\x72\x69\x70\x74\x3A\x76\x6F\x69\x64\x28\x30\x29\x27\x20\x69\x64\x3D\x27\x70\x6C","\x27\x3E\x3C\x69\x20\x63\x6C\x61\x73\x73\x3D\x27\x66\x61\x73\x20\x66\x61\x2D\x74\x72\x61\x73\x68\x27\x3E\x3C\x2F\x69\x3E\x3C\x2F\x61\x3E\x20\x3C\x61\x20\x68\x72\x65\x66\x3D\x27\x6A\x61\x76\x61\x73\x63\x72\x69\x70\x74\x3A\x76\x6F\x69\x64\x28\x30\x29\x27\x3E\x3C\x69\x20\x63\x6C\x61\x73\x73\x3D\x27\x66\x61\x73\x20\x66\x61\x2D\x65\x64\x69\x74\x27\x3E\x3C\x2F\x69\x3E\x3C\x2F\x61\x3E\x3C\x2F\x74\x64\x3E","\x3C\x2F\x74\x72\x3E","\x66\x6F\x72\x45\x61\x63\x68","\x68\x74\x6D\x6C","\x23\x61\x6C\x6C\x5F\x70\x6C\x79\x72\x5F\x64\x61\x74\x61","\x53\x65\x6C\x65\x63\x74\x20\x61\x20\x70\x6C\x61\x79\x65\x72\x73","\x73\x65\x6C\x65\x63\x74\x32","\x23\x73\x65\x6C\x32\x5F\x70\x6C\x61\x79\x65\x72","\x63\x6C\x69\x63\x6B","\x23\x70\x6C","\x23\x74\x62\x6C\x5F\x70\x6C","\x76\x61\x6C\x75\x65","\x6F\x6E\x63\x65","\x74\x69\x74\x6C\x65","\x3C\x74\x64\x3E\x3C\x61\x20\x74\x61\x72\x67\x65\x74\x3D\x27\x5F\x62\x6C\x61\x6E\x6B\x27\x20\x68\x72\x65\x66\x3D\x27\x68\x74\x74\x70\x73\x3A\x2F\x2F\x77\x77\x77\x2E\x79\x6F\x75\x74\x75\x62\x65\x2E\x63\x6F\x6D\x2F\x77\x61\x74\x63\x68\x3F\x76\x3D","\x76\x69\x64\x65\x6F\x5F\x69\x64","\x3C\x2F\x61\x3E\x3C\x2F\x74\x64\x3E","\x70\x6C\x61\x79\x65\x72","\x74\x61\x67\x73","\x61\x64\x5F\x64\x61\x74\x65","\x3C\x74\x64\x3E\x3C\x61\x20\x68\x72\x65\x66\x3D\x27\x6A\x61\x76\x61\x73\x63\x72\x69\x70\x74\x3A\x76\x6F\x69\x64\x28\x30\x29\x27\x20\x69\x64\x3D\x27\x76\x69","\x23\x61\x6C\x6C\x5F\x76\x69\x64\x5F\x64\x61\x74\x61","\x23\x76\x69","\x23\x74\x62\x6C\x5F\x76\x69","\x41\x49\x7A\x61\x53\x79\x41\x68\x59\x50\x5A\x62\x6B\x61\x59\x70\x47\x32\x67\x63\x57\x43\x76\x4C\x58\x48\x38\x36\x79\x72\x45\x79\x53\x51\x6D\x38\x4A\x52\x6B","\x77\x77\x65\x2D\x76\x69\x64\x65\x6F\x2E\x66\x69\x72\x65\x62\x61\x73\x65\x61\x70\x70\x2E\x63\x6F\x6D","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x77\x77\x65\x2D\x76\x69\x64\x65\x6F\x2E\x66\x69\x72\x65\x62\x61\x73\x65\x69\x6F\x2E\x63\x6F\x6D","\x77\x77\x65\x2D\x76\x69\x64\x65\x6F","\x77\x77\x65\x2D\x76\x69\x64\x65\x6F\x2E\x61\x70\x70\x73\x70\x6F\x74\x2E\x63\x6F\x6D","\x39\x31\x38\x35\x38\x35\x32\x31\x36\x30\x33\x37","\x69\x6E\x69\x74\x69\x61\x6C\x69\x7A\x65\x41\x70\x70","\x74\x6F\x6F\x6C\x74\x69\x70","\x5B\x64\x61\x74\x61\x2D\x74\x6F\x67\x67\x6C\x65\x3D\x22\x74\x6F\x6F\x6C\x74\x69\x70\x22\x5D","\x64\x69\x73\x70\x6C\x61\x79","\x62\x6C\x6F\x63\x6B","\x63\x73\x73","\x2E\x64\x61\x73\x68\x2D\x62\x6F\x61\x72\x64","\x6E\x6F\x6E\x65","\x2E\x6C\x6F\x67\x69\x6E\x2D\x66\x6F\x72\x6D","\x6F\x6E\x41\x75\x74\x68\x53\x74\x61\x74\x65\x43\x68\x61\x6E\x67\x65\x64","\x61\x75\x74\x68","\x73\x69\x67\x6E\x4F\x75\x74","\x23\x6C\x6F\x67\x6F\x75\x74","\x23\x72\x65\x66\x72\x65\x73\x68","\x63\x6F\x64\x65","\x6D\x65\x73\x73\x61\x67\x65","\x28","\x29","\x74\x65\x78\x74","\x23\x6C\x6F\x67\x69\x6E\x65\x72\x72","\x63\x61\x74\x63\x68","\x23\x65\x6D\x61\x69\x6C","\x23\x70\x61\x73\x73\x77\x6F\x72\x64","\x73\x69\x67\x6E\x49\x6E\x57\x69\x74\x68\x45\x6D\x61\x69\x6C\x41\x6E\x64\x50\x61\x73\x73\x77\x6F\x72\x64","\x73\x75\x62\x6D\x69\x74","\x23\x66\x72\x6D\x4C\x6F\x67\x69\x6E","\x6B\x65\x79","\x23\x70\x6C\x5F\x6E\x61\x6D\x65","\x23\x70\x6C\x5F\x75\x72\x6C","\x47\x6F\x6F\x64\x20\x6A\x6F\x62\x21","\x50\x6C\x61\x79\x65\x72\x20\x69\x6E\x73\x65\x72\x74\x65\x64\x21","\x73\x65\x74","\x23\x66\x72\x6D\x50\x6C\x61\x79\x65\x72","\x64\x61\x74\x61","\x23","\x6C\x65\x6E\x67\x74\x68","\x73\x75\x62\x73\x74\x72","\x74\x72\x69\x6D","\x23\x76\x69\x5F\x76\x69\x64\x65\x6F\x5F\x69\x64","\x45\x72\x72\x6F\x72\x21","\x54\x68\x65\x20\x76\x69\x64\x65\x6F\x20\x61\x6C\x72\x65\x61\x64\x79\x20\x65\x78\x69\x73\x74\x73\x21","\x65\x72\x72\x6F\x72","\x23\x76\x69\x5F\x74\x69\x74\x6C\x65","\x72\x65\x70\x6C\x61\x63\x65","\x23\x76\x69\x5F\x74\x61\x67\x73","\x59\x59\x59\x59\x2D\x4D\x4D\x2D\x44\x44\x20\x68\x68\x3A\x6D\x6D\x20\x41","\x66\x6F\x72\x6D\x61\x74","\x4E\x65\x77\x20\x76\x69\x64\x65\x6F\x20\x69\x6E\x73\x65\x72\x74\x65\x64\x21","\x23\x66\x72\x6D\x56\x69\x64\x65\x6F\x73","\x72\x65\x61\x64\x79"];function del_pl(_0xcb1bx2){swal({title:_0x3295[8],text:_0x3295[9],icon:_0x3295[10],buttons:true,dangerMode:true})[_0x3295[7]]((_0xcb1bx3)=>{if(_0xcb1bx3){firebase[_0x3295[4]]()[_0x3295[3]](_0x3295[2])[_0x3295[1]](_0xcb1bx2)[_0x3295[0]]();swal(_0x3295[5],{icon:_0x3295[6]});get_data()}else {}})}function del_vi(_0xcb1bx2){swal({title:_0x3295[8],text:_0x3295[13],icon:_0x3295[10],buttons:true,dangerMode:true})[_0x3295[7]]((_0xcb1bx3)=>{if(_0xcb1bx3){firebase[_0x3295[4]]()[_0x3295[3]](_0x3295[11])[_0x3295[1]](_0xcb1bx2)[_0x3295[0]]();swal(_0x3295[12],{icon:_0x3295[6]});get_data()}else {}})}function get_data(){var _0xcb1bx6={};firebase[_0x3295[4]]()[_0x3295[3]](_0x3295[2])[_0x3295[40]](_0x3295[39])[_0x3295[7]](function(_0xcb1bx7){var _0xcb1bx8=1;var _0xcb1bx9=[];var _0xcb1bxa=_0x3295[14];_0xcb1bx7[_0x3295[30]](function(_0xcb1bxb){var _0xcb1bxc=_0xcb1bxb[_0x3295[15]]();_0xcb1bx9[_0x3295[17]]({id:_0xcb1bx8,text:_0xcb1bxc[_0x3295[16]]});_0xcb1bxa+= _0x3295[18];_0xcb1bxa+= _0x3295[19]+ _0xcb1bxc[_0x3295[20]]+ _0x3295[21]+ _0xcb1bxc[_0x3295[20]]+ _0x3295[22];_0xcb1bxa+= _0x3295[23]+ _0xcb1bxc[_0x3295[16]]+ _0x3295[22];_0xcb1bxa+= _0x3295[24]+ _0xcb1bxc[_0x3295[25]]+ _0x3295[26];_0xcb1bxa+= _0x3295[27]+ _0xcb1bxc[_0x3295[20]]+ _0x3295[28];_0xcb1bxa+= _0x3295[29];_0xcb1bx8++});$(_0x3295[32])[_0x3295[31]](_0xcb1bxa);$(_0x3295[35])[_0x3295[34]]({data:_0xcb1bx9,placeholder:_0x3295[33]});_0xcb1bx7[_0x3295[30]](function(_0xcb1bxb){var _0xcb1bxc=_0xcb1bxb[_0x3295[15]]();$(_0x3295[37]+ _0xcb1bxc[_0x3295[20]])[_0x3295[36]](function(){del_pl(_0xcb1bxc[_0x3295[20]])})});$(_0x3295[38]).DataTable()});firebase[_0x3295[4]]()[_0x3295[3]](_0x3295[11])[_0x3295[40]](_0x3295[39])[_0x3295[7]](function(_0xcb1bx7){var _0xcb1bxd=_0x3295[14];_0xcb1bx7[_0x3295[30]](function(_0xcb1bxb){var _0xcb1bxc=_0xcb1bxb[_0x3295[15]]();_0xcb1bxd+= _0x3295[18];_0xcb1bxd+= _0x3295[19]+ _0xcb1bxc[_0x3295[20]]+ _0x3295[21]+ _0xcb1bxc[_0x3295[20]]+ _0x3295[22];_0xcb1bxd+= _0x3295[23]+ _0xcb1bxc[_0x3295[41]]+ _0x3295[22];_0xcb1bxd+= _0x3295[42]+ _0xcb1bxc[_0x3295[43]]+ _0x3295[21]+ _0xcb1bxc[_0x3295[43]]+ _0x3295[44];_0xcb1bxd+= _0x3295[23]+ _0xcb1bxc[_0x3295[45]]+ _0x3295[22];_0xcb1bxd+= _0x3295[19]+ _0xcb1bxc[_0x3295[46]]+ _0x3295[21]+ _0xcb1bxc[_0x3295[46]]+ _0x3295[22];_0xcb1bxd+= _0x3295[23]+ _0xcb1bxc[_0x3295[47]]+ _0x3295[22];_0xcb1bxd+= _0x3295[48]+ _0xcb1bxc[_0x3295[20]]+ _0x3295[28];_0xcb1bxd+= _0x3295[29]});$(_0x3295[49])[_0x3295[31]](_0xcb1bxd);_0xcb1bx7[_0x3295[30]](function(_0xcb1bxb){var _0xcb1bxc=_0xcb1bxb[_0x3295[15]]();$(_0x3295[50]+ _0xcb1bxc[_0x3295[20]])[_0x3295[36]](function(){del_vi(_0xcb1bxc[_0x3295[20]])})});$(_0x3295[51]).DataTable()})}var config={apiKey:_0x3295[52],authDomain:_0x3295[53],databaseURL:_0x3295[54],projectId:_0x3295[55],storageBucket:_0x3295[56],messagingSenderId:_0x3295[57]};firebase[_0x3295[58]](config);$(document)[_0x3295[107]](function(){$(_0x3295[60])[_0x3295[59]]();$(_0x3295[35])[_0x3295[34]]({placeholder:_0x3295[33]});firebase[_0x3295[68]]()[_0x3295[67]](function(_0xcb1bxf){if(_0xcb1bxf){$(_0x3295[64])[_0x3295[63]](_0x3295[61],_0x3295[62]);$(_0x3295[66])[_0x3295[63]](_0x3295[61],_0x3295[65]);get_data()}else {$(_0x3295[64])[_0x3295[63]](_0x3295[61],_0x3295[65]);$(_0x3295[66])[_0x3295[63]](_0x3295[61],_0x3295[62])}});$(_0x3295[70])[_0x3295[36]](function(){firebase[_0x3295[68]]()[_0x3295[69]]();$(_0x3295[64])[_0x3295[63]](_0x3295[61],_0x3295[65]);$(_0x3295[66])[_0x3295[63]](_0x3295[61],_0x3295[62])});$(_0x3295[71])[_0x3295[36]](function(){get_data()});$(_0x3295[83])[_0x3295[82]](function(){firebase[_0x3295[68]]()[_0x3295[81]]($(_0x3295[79])[_0x3295[15]](),$(_0x3295[80])[_0x3295[15]]())[_0x3295[7]](function(){$(_0x3295[64])[_0x3295[63]](_0x3295[61],_0x3295[62]);$(_0x3295[66])[_0x3295[63]](_0x3295[61],_0x3295[65])})[_0x3295[78]](function(_0xcb1bx10){var _0xcb1bx11=_0xcb1bx10[_0x3295[72]];var _0xcb1bx12=_0xcb1bx10[_0x3295[73]];$(_0x3295[77])[_0x3295[76]](_0xcb1bx12+ _0x3295[74]+ _0xcb1bx11+ _0x3295[75])});return false});$(_0x3295[90])[_0x3295[82]](function(){var _0xcb1bx13=firebase[_0x3295[4]]()[_0x3295[3]]()[_0x3295[1]](_0x3295[2])[_0x3295[17]]();var _0xcb1bx14={id:_0xcb1bx13[_0x3295[84]],name:$(_0x3295[85])[_0x3295[15]](),imgUrl:$(_0x3295[86])[_0x3295[15]]()};_0xcb1bx13[_0x3295[89]](_0xcb1bx14)[_0x3295[7]](function(_0xcb1bx7){swal(_0x3295[87],_0x3295[88],_0x3295[6])});get_data();return false});$(_0x3295[106])[_0x3295[82]](function(){var _0xcb1bx15=_0x3295[14];var _0xcb1bx16=$(_0x3295[35])[_0x3295[34]](_0x3295[91]);_0xcb1bx16[_0x3295[30]](function(_0xcb1bx17,_0xcb1bx18){_0xcb1bx15+= _0xcb1bx17[_0x3295[76]]+ _0x3295[92]});_0xcb1bx15= _0xcb1bx15[_0x3295[94]](0,_0xcb1bx15[_0x3295[93]]- 1);firebase[_0x3295[4]]()[_0x3295[3]](_0x3295[11])[_0x3295[40]](_0x3295[39])[_0x3295[7]](function(_0xcb1bx7){var _0xcb1bx19=false;_0xcb1bx7[_0x3295[30]](function(_0xcb1bxb){var _0xcb1bxc=_0xcb1bxb[_0x3295[15]]();if(_0xcb1bxc[_0x3295[43]]== $(_0x3295[96])[_0x3295[15]]()[_0x3295[95]]()){_0xcb1bx19= true}});if(_0xcb1bx19){swal(_0x3295[97],_0x3295[98],_0x3295[99])}else {var _0xcb1bx1a=firebase[_0x3295[4]]()[_0x3295[3]]()[_0x3295[1]](_0x3295[11])[_0x3295[17]]();var _0xcb1bx1b={id:_0xcb1bx1a[_0x3295[84]],title:$(_0x3295[100])[_0x3295[15]](),video_id:$(_0x3295[96])[_0x3295[15]](),player:_0xcb1bx15,tags:$(_0x3295[102])[_0x3295[15]]()[_0x3295[101]](/,/g,_0x3295[92]),ad_date:moment()[_0x3295[104]](_0x3295[103])};_0xcb1bx1a[_0x3295[89]](_0xcb1bx1b)[_0x3295[7]](function(_0xcb1bx7){swal(_0x3295[87],_0x3295[105],_0x3295[6]);get_data()})}});return false})})
+function del_pl(id) {
+    swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this Player!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                firebase.database().ref('players').child(id).remove();
+                swal("Player has been deleted!", {
+                    icon: "success",
+                });
+                get_data();
+            } else {
+
+            }
+        });
+}
+
+function del_vi(id) {
+    swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this Video!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                firebase.database().ref('videos').child(id).remove();
+                swal("Video has been deleted!", {
+                    icon: "success",
+                });
+                get_data();
+            } else {
+
+            }
+        });
+}
+
+function get_data() {
+    //get players
+    var all_pl = {}
+    firebase.database().ref('players').once('value').then(function(snapshot) {
+        var i = 1;
+        var sel_data = [];
+        var plyr_tbl_data = "";
+        snapshot.forEach(function(childSnapshot) {
+            var childData = childSnapshot.val();
+            sel_data.push({ id: i, text: childData.name });
+
+            plyr_tbl_data += "<tr>";
+            plyr_tbl_data += "<td class='elip' data-toggle='tooltip' title='" + childData.id + "'>" + childData.id + "</td>";
+            plyr_tbl_data += "<td>" + childData.name + "</td>";
+            plyr_tbl_data += "<td><img class='img-responsive' width=90 src='" + childData.imgUrl + "' /></td>";
+            plyr_tbl_data += "<td><a href='javascript:void(0)' id='pl" + childData.id + "'><i class='fas fa-trash'></i></a> <a href='javascript:void(0)'><i class='fas fa-edit'></i></a></td>";
+            plyr_tbl_data += "</tr>";
+            i++;
+
+
+        });
+        $("#all_plyr_data").html(plyr_tbl_data);
+        $('#sel2_player').select2({
+            data: sel_data,
+            placeholder: "Select a players"
+        });
+
+        snapshot.forEach(function(childSnapshot) {
+            var childData = childSnapshot.val();
+            //onclick delete player
+            $("#pl" + childData.id).click(function() {
+                del_pl(childData.id);
+            });
+
+        });
+        $('#tbl_pl').DataTable();
+    });
+
+    //get all videos
+    firebase.database().ref('videos').once('value').then(function(snapshot) {
+        var vid_tbl_data = "";
+        snapshot.forEach(function(childSnapshot) {
+            var childData = childSnapshot.val();
+            vid_tbl_data += "<tr>";
+            vid_tbl_data += "<td class='elip' data-toggle='tooltip' title='" + childData.id + "'>" + childData.id + "</td>";
+            vid_tbl_data += "<td>" + childData.title + "</td>";
+            vid_tbl_data += "<td><a target='_blank' href='https://www.youtube.com/watch?v=" + childData.video_id + "'>" + childData.video_id + "</a></td>";
+            vid_tbl_data += "<td>" + childData.player + "</td>";
+            vid_tbl_data += "<td class='elip' data-toggle='tooltip' title='" + childData.tags + "'>" + childData.tags + "</td>";
+            vid_tbl_data += "<td>" + childData.ad_date + "</td>";
+            vid_tbl_data += "<td><a href='javascript:void(0)' id='vi" + childData.id + "'><i class='fas fa-trash'></i></a> <a href='javascript:void(0)'><i class='fas fa-edit'></i></a></td>";
+            vid_tbl_data += "</tr>";
+        });
+        $("#all_vid_data").html(vid_tbl_data);
+
+        snapshot.forEach(function(childSnapshot) {
+            var childData = childSnapshot.val();
+            //onclick delete video
+            $("#vi" + childData.id).click(function() {
+                del_vi(childData.id);
+            });
+
+        });
+        $('#tbl_vi').DataTable();
+    });
+}
+
+var config = {
+    apiKey: "AIzaSyAhYPZbkaYpG2gcWCvLXH86yrEySQm8JRk",
+    authDomain: "wwe-video.firebaseapp.com",
+    databaseURL: "https://wwe-video.firebaseio.com",
+    projectId: "wwe-video",
+    storageBucket: "wwe-video.appspot.com",
+    messagingSenderId: "918585216037"
+};
+firebase.initializeApp(config);
+
+$(document).ready(function() {
+
+    $('[data-toggle="tooltip"]').tooltip();
+
+    $('#sel2_player').select2({
+        placeholder: "Select a players"
+    });
+
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            $(".dash-board").css("display", "block");
+            $(".login-form").css("display", "none");
+
+            get_data();
+
+        } else {
+            $(".dash-board").css("display", "none");
+            $(".login-form").css("display", "block");
+        }
+    });
+    $("#logout").click(function() {
+        firebase.auth().signOut();
+        $(".dash-board").css("display", "none");
+        $(".login-form").css("display", "block");
+    });
+    $("#refresh").click(function() {
+        get_data();
+    });
+    $("#frmLogin").submit(function() {
+        firebase.auth().signInWithEmailAndPassword($("#email").val(), $("#password").val()).then(function() {
+            $(".dash-board").css("display", "block");
+            $(".login-form").css("display", "none");
+        }).catch(function(error) {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            $("#loginerr").text(errorMessage + "(" + errorCode + ")");
+        });
+        return false;
+    });
+
+    $("#frmPlayer").submit(function() {
+        var newPlayer = firebase.database().ref().child('players').push();
+        var pl_data = {
+            id: newPlayer.key,
+            name: $("#pl_name").val(),
+            imgUrl: $("#pl_url").val()
+        };
+        newPlayer.set(pl_data).then(function(snapshot) {
+            swal("Good job!", "Player inserted!", "success");
+        });
+        get_data();
+        return false;
+    });
+
+    $("#frmVideos").submit(function() {
+        var select2_data = "";
+        var sel_sel = $('#sel2_player').select2('data');
+        sel_sel.forEach(function(item, index) {
+            select2_data += item.text + "#";
+        });
+        select2_data = select2_data.substr(0, select2_data.length - 1);
+
+        firebase.database().ref('videos').once('value').then(function(snapshot) {
+            var is_data_exists = false;
+            snapshot.forEach(function(childSnapshot) {
+                var childData = childSnapshot.val();
+                if (childData.video_id == $("#vi_video_id").val().trim()) {
+                    is_data_exists = true;
+                }
+            });
+            if (is_data_exists) {
+                swal("Error!", "The video already exists!", "error");
+            } else {
+
+
+                var newVideo = firebase.database().ref().child('videos').push();
+                var vid_data = {
+                    id: newVideo.key,
+                    title: $("#vi_title").val(),
+                    video_id: $("#vi_video_id").val(),
+                    player: select2_data,
+                    tags: $("#vi_tags").val().replace(/,/g, '#'),
+                    ad_date: moment().format('YYYY-MM-DD hh:mm A')
+                };
+                newVideo.set(vid_data).then(function(snapshot) {
+                    swal("Good job!", "New video inserted!", "success");
+                    get_data();
+                });
+
+
+            }
+        });
+        return false;
+    });
+});

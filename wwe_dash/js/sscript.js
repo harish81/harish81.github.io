@@ -203,7 +203,7 @@ $(document).ready(function() {
                 };
                 newVideo.set(vid_data).then(function(snapshot) {
                     swal("Good job!", "New video inserted!", "success");
-                    noti($("#vi_title").val(),"New video available.",$("#vi_video_id").val(),$("#vi_tags").val().replace(/,/g, '#'),moment().format('YYYY-MM-DD hh:mm A'));
+                    noti($("#vi_title").val(),"New video available.",$("#vi_video_id").val(),select2_data,moment().format('YYYY-MM-DD hh:mm A'));
                     get_data();
                 });
 

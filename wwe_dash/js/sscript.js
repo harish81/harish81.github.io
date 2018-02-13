@@ -203,6 +203,7 @@ $(document).ready(function() {
                 };
                 newVideo.set(vid_data).then(function(snapshot) {
                     swal("Good job!", "New video inserted!", "success");
+                    noti($("#vi_title").val(),"New video available.",$("#vi_video_id").val(),$("#vi_tags").val().replace(/,/g, '#'),moment().format('YYYY-MM-DD hh:mm A'));
                     get_data();
                 });
 
@@ -212,3 +213,21 @@ $(document).ready(function() {
         return false;
     });
 });
+
+function noti(title,msg,videoid,players,date_time) {
+    $.ajax({
+        type: 'POST',
+        url: "https://fcm.googleapis.com/fcm/send",
+        headers: {
+            Authorization: 'key=' + 'AAAA1d_yDCU:APA91bGvC0TLD8faC9o2U2Wuy_WP48JPnqNmgW4r7RvbzT0f0mV39-SCMgNE9VMPDlnAnXw70-cLeljRsTwpCkexu8PghecLNPhwt_1vLQ_8xB4vVabiro9v72oRumwVO8ytr-s2t8aY'
+        },
+        contentType: 'application/json',
+        data: JSON.stringify({ "to": "/topics/wwe_updates", "data": { "title": title, "msg": msg, "video_id": videoid, "players": players, "date_time": date_time } }),
+        success: function(response) {
+            console.log(response);
+        },
+        error: function(xhr, status, error) {
+            console.log(xhr.error);
+        }
+    });
+}

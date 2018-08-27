@@ -15,22 +15,21 @@
     <form action="" method="post" id="frm">
         <textarea id="xmldoc" cols="30" rows="10">
         </textarea>
-        <input type="text" id="inptxt" />
+        <input type="checkbox" value="modvar" id="genMod">Generate Modal Varient
         <button type="submit">GENERATE</button>
     </form>
-    <div id="result">
+    <pre id="result">
 
-    </div>
+    </pre>
 </body>
 
 <script>
     $(document).ready(function () {
         $('#frm').submit(function (e) {
             e.preventDefault();
-            normalizeIds("@+id/btnDate");
-            return;
             var xmldoc = $.parseXML($('#xmldoc').val());
             var results = [];
+            var rs_plain="";
             //$('#result').text(xmldoc);
             $(xmldoc).find('[android\\:id]').each(function () {
                 var className = $(this).prop('tagName');
@@ -39,17 +38,35 @@
                 if(typeof results[className] == 'undefined'){
                     results[className] = [];
                 }
-                results[className].push(ids);
+                if($('#genMod').is(':checked')){
+                    results[className].push(normalizeIds2(normalizeIds(ids)));
+                }else{
+                    results[className].push(normalizeIds(ids));
+                }
 
             });
             console.log(results);
-
+            for (var k in results){
+                if (results.hasOwnProperty(k)) {
+                     //alert("Key is " + k + ", value is" + results[k]);
+                    rs_plain += 'private '+k+' '+results[k].toString()+';\r\n';
+                }
+            }
+            $('#result').text(rs_plain);
         });
     });
 
     function normalizeIds(v){
-        var rm_prefix = v.substr(v.indexOf('/')+1,v.length);
-        alert(rm_prefix);
+        return v.substr(v.indexOf('/')+1,v.length);
+    }
+
+    function normalizeIds2(v) {
+        for(var i=0;i<v.length;i++){
+            if(v.charAt(i)==v.charAt(i).toUpperCase()){
+                return v.charAt(i).toLowerCase() + v.substr(i+1, v.length);
+            }
+        }
+        return v;
     }
 </script>
 

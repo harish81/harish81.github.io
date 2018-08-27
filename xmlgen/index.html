@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Android XML To Java Generator</title>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+    <form action="" method="post" id="frm">
+        <textarea id="xmldoc" cols="30" rows="10">
+        </textarea>
+        <input type="text" id="inptxt" />
+        <button type="submit">GENERATE</button>
+    </form>
+    <div id="result">
+
+    </div>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $('#frm').submit(function (e) {
+            e.preventDefault();
+            normalizeIds("@+id/btnDate");
+            return;
+            var xmldoc = $.parseXML($('#xmldoc').val());
+            var results = [];
+            //$('#result').text(xmldoc);
+            $(xmldoc).find('[android\\:id]').each(function () {
+                var className = $(this).prop('tagName');
+                var ids = $(this).attr('android:id');
+
+                if(typeof results[className] == 'undefined'){
+                    results[className] = [];
+                }
+                results[className].push(ids);
+
+            });
+            console.log(results);
+
+        });
+    });
+
+    function normalizeIds(v){
+        var rm_prefix = v.substr(v.indexOf('/')+1,v.length);
+        alert(rm_prefix);
+    }
+</script>
+
+</html>

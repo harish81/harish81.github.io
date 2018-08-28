@@ -84,10 +84,12 @@
 			var code = $("#code").val();
 			//var test = code.replace(reg,"xxx");
 			$("#codegens").show();
+			var hints = code.match(regGlob) || [];
 			var count = (code.match(regGlob) || []).length;
 			for(i=1;i<=count;i++)
 			{
-				$("#inputCode").append('<input type="text" placeholder="Enter value '+i+'" class="form-control" name="pname[]" /><br>');
+				ph = hints[i-1].replace(/_@/g, '');
+				$("#inputCode").append('<input type="text" placeholder="Enter value for '+ph+'" class="form-control" name="pname[]" /><br>');
 			}
 			genClearBtn();
 		}
@@ -139,6 +141,10 @@
 			<div class="form-group">
 				<button id="btnClear" name="btnClear" class="btn btn-primary">NEW</button>
 				<button id="btnGen" name="btnGen" class="btn btn-primary float-right">GENERATE</button>
+			</div>
+			<div class="alert alert-warning alert-dismissible">
+  				<button type="button" class="close" data-dismiss="alert">&times;</button>
+  				<strong>Note!</strong><br> Use _@ before and after to use it as dynamic variable. ex. I am _@Name_@ 
 			</div>
 		</form>
 		<br /><br />

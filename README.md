@@ -1,5 +1,5 @@
 # Harish Nandoliya
-Usefull dev tools by Harish Nandoliya
+Useful dev tools by Harish Nandoliya
 @harish81
 
 #### Tools

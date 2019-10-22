@@ -1,6 +1,4 @@
-# Harish Nandoliya
-Useful dev tools by Harish Nandoliya
-@harish81
+Useful Developer Tool Developed by harish nandoliya
 
 #### Tools
 1. [Code Generator](https://harish81.github.io/codegen/).

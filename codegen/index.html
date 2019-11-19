@@ -6,8 +6,7 @@
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<!-- <link rel="stylesheet" type="text/css" href="css/prism.css">
-	<script type="text/javascript" src="js/prism.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.min.js" integrity="sha256-oh7N5nthuhldTk8/34Za7FXv3BkeVN9vAnYk/pLfC78=" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 
@@ -51,18 +50,22 @@
 		function doAdd()
 		{
 			var currCode = $("#gens").val();
-			var regGlob = /(\_@.*?\_@)/gi;
-			var reg = /(\_@.*?\_@)/;
+			var regGlob = /(\{{.*?\}})/g;
 			var code = $("#code").val();
-			var count = (code.match(regGlob) || []).length;
-			var inps = document.getElementsByName('pname[]');
 			var codeToAdd = code;
-			for (var i = 0; i <inps.length; i++) {
-			var inp=inps[i];
-			    //alert("pname["+i+"].value="+inp.value);
-			    var test = codeToAdd.replace(reg,inp.value);
-			    codeToAdd = test;
+			var hints = code.match(regGlob) || [];
+			hints = hints.filter(function(item, pos) {
+    			return hints.indexOf(item) == pos;
+			});
+			var data = {};
+			for(i=1;i<=hints.length;i++)
+			{
+				ph = hints[i-1].replace(/{{/g, '').replace(/}}/g, '');
+				data[ph] = $('input[name="pname['+ph+']"').val();
 			}
+			var template = Handlebars.compile(code);
+			codeToAdd = template(data);
+
 			var genVal = $("#gens").val();
 			$("#gens").val(genVal+"\n"+codeToAdd);
 
@@ -79,17 +82,17 @@
 		}
 
 		function doGen(){			
-			var regGlob = /(\_@.*?\_@)/gi;
-			var reg = /(\_@.*?\_@)/;
+			var regGlob = /(\{{.*?\}})/g;
 			var code = $("#code").val();
-			//var test = code.replace(reg,"xxx");
 			$("#codegens").show();
 			var hints = code.match(regGlob) || [];
-			var count = (code.match(regGlob) || []).length;
-			for(i=1;i<=count;i++)
+			hints = hints.filter(function(item, pos) {
+    			return hints.indexOf(item) == pos;
+			});
+			for(i=1;i<=hints.length;i++)
 			{
-				ph = hints[i-1].replace(/_@/g, '');
-				$("#inputCode").append('<input type="text" placeholder="Enter value for '+ph+'" class="form-control" name="pname[]" /><br>');
+				ph = hints[i-1].replace(/{{/g, '').replace(/}}/g, '');
+				$("#inputCode").append('<input type="text" placeholder="Enter value for '+ph+'" class="form-control" name="pname['+ph+']" /><br>');
 			}
 			genClearBtn();
 		}
@@ -131,11 +134,13 @@
 <body>
 	<div style="margin-top: 20px;"></div>
 	<div class="container-fluid">
+		<h2>Generate documents from template</h2>
+		<hr>
 		<div class="row">
 		<div class="col-md-6 col-lg-6">
 		<form id="frm">
 			<div class="form-group">
-				<label>Enter code here</label>
+				<label>Enter template here</label>
 				<textarea name="code" id="code" rows="15" class="form-control"></textarea>
 			</div>
 			<div class="form-group">
@@ -144,7 +149,7 @@
 			</div>
 			<div class="alert alert-warning alert-dismissible">
   				<button type="button" class="close" data-dismiss="alert">&times;</button>
-  				<strong>Note!</strong><br> Use _@ before and after to use it as dynamic variable. <br>ex.<pre><code> I am _@Name_@</code></pre> 
+  				<strong>Note!</strong><br> Use {{ before and }} after to use it as dynamic variable. <br>ex.<pre><code> I am {{name}}</code></pre> 
 			</div>
 		</form>
 		<br /><br />

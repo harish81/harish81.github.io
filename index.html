@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Harish Nandoliya | harish81.github.io</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .nav {
+            background: #444444;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .nav .title {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 40px;
+            color: #FFFFFF;
+            margin-bottom: 5px;
+        }
+
+        .btn-main {
+            background: linear-gradient(180deg, #1CD8D2 0%, #499DFF 100%);
+            box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.25);
+            border-radius: 4px;
+            padding: 14px;
+            display: inline-block;
+            font-style: normal;
+            font-weight: normal;
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .footer {
+            background: #444444;
+            color: #ccc;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .proj-title {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 25px;
+            color: #333333;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .card {
+            background: #FFFFFF;
+            border-radius: 5px;
+            display: block;
+            padding: 5px;
+            position: relative;
+            height: calc(100% - 10px);
+        }
+
+        .card-title {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 23px;
+            line-height: 29px;
+            color: #333333;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .card-content {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 21px;
+        }
+
+        .card-footer {
+            margin-top: 8px;
+            margin-bottom: 5px;
+            position: relative;
+            bottom: 0;
+            text-align: center;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+
+        }
+
+        .col {
+            box-shadow: 0 1px 6px rgba(57,73,76,0.35);
+            background: linear-gradient(180deg, #1CD8D2 0%, #499DFF 100%);
+            border-radius: 5px;
+            padding: 2px;
+            margin: 5px;
+            flex-shrink: 1;
+            flex-basis: 200px;
+            min-height: 100px;
+        }
+
+        .btn-more {
+            background: -webkit-linear-gradient(#1CD8D2, #499DFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bio {
+            font-weight: 300;
+            color: #dddddd;
+        }
+
+        @media screen and (max-width: 768px) {
+            .row {
+                display: block;
+            }
+
+            .container {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav class="nav">
+    <div class="container" x-data="userInfo()">
+        <div class="title" x-text="name"></div>
+        <div class="bio" style="color: #FFFFFF" x-text="bio"></div>
+        <br>
+        <a :href="github" class="btn-main">
+            <svg fill="none" height="15" viewBox="0 0 16 17" width="14" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.0513 16.0962V13.3177C11.0782 12.9754 11.032 12.6312 10.9156 12.3081C10.7992 11.985 10.6154 11.6904 10.3764 11.4439C12.6308 11.1926 15 10.3382 15 6.41821C14.9998 5.41583 14.6142 4.45189 13.9231 3.7259C14.2504 2.84893 14.2272 1.87959 13.8585 1.01924C13.8585 1.01924 13.0113 0.767954 11.0513 2.0818C9.40575 1.63583 7.67117 1.63583 6.02564 2.0818C4.06564 0.767954 3.21846 1.01924 3.21846 1.01924C2.84971 1.87959 2.82657 2.84893 3.15385 3.7259C2.45753 4.45728 2.07155 5.42993 2.07692 6.43975C2.07692 10.331 4.44615 11.1854 6.70051 11.4654C6.46431 11.7095 6.28214 12.0006 6.16586 12.3197C6.04959 12.6388 6.00181 12.9789 6.02564 13.3177V16.0962M6.02564 13.9423C2.4359 15.0192 2.4359 12.1474 1 11.7885L6.02564 13.9423Z"
+                      stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+            </svg>
+            Github</a>
+        <a :href="website" class="btn-main">
+            <svg fill="none" height="14" viewBox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 13C10.4295 13.5741 10.9774 14.0492 11.6066 14.3929C12.2357 14.7367 12.9315 14.9411 13.6467 14.9923C14.3618 15.0435 15.0796 14.9404 15.7513 14.6898C16.4231 14.4392 17.0331 14.0471 17.54 13.54L20.54 10.54C21.4508 9.59699 21.9548 8.33397 21.9434 7.02299C21.932 5.71201 21.4061 4.45794 20.4791 3.5309C19.5521 2.60386 18.298 2.07802 16.987 2.06663C15.676 2.05523 14.413 2.55921 13.47 3.47L11.75 5.18"
+                      stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                <path d="M14 11C13.5705 10.4259 13.0226 9.95081 12.3934 9.60706C11.7642 9.2633 11.0684 9.05888 10.3533 9.00766C9.63816 8.95645 8.92037 9.05963 8.24861 9.31021C7.57685 9.5608 6.96684 9.95293 6.45996 10.46L3.45996 13.46C2.54917 14.403 2.04519 15.666 2.05659 16.977C2.06798 18.288 2.59382 19.542 3.52086 20.4691C4.4479 21.3961 5.70197 21.922 7.01295 21.9334C8.32393 21.9448 9.58694 21.4408 10.53 20.53L12.24 18.82"
+                      stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </svg>
+            Website
+        </a>
+        <a :href="upwork" class="btn-main">
+            <svg fill="none" height="14" viewBox="0 0 14 14" width="14" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.6666 4.08333H2.33329C1.68896 4.08333 1.16663 4.60566 1.16663 5.24999V11.0833C1.16663 11.7277 1.68896 12.25 2.33329 12.25H11.6666C12.311 12.25 12.8333 11.7277 12.8333 11.0833V5.24999C12.8333 4.60566 12.311 4.08333 11.6666 4.08333Z"
+                      stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.33329 12.25V2.91667C9.33329 2.60725 9.21038 2.3105 8.99158 2.09171C8.77279 1.87292 8.47605 1.75 8.16663 1.75H5.83329C5.52387 1.75 5.22713 1.87292 5.00833 2.09171C4.78954 2.3105 4.66663 2.60725 4.66663 2.91667V12.25"
+                      stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Hire Me!
+        </a>
+    </div>
+</nav>
+<div class="container" x-data="projects()">
+    <label class="proj-title">Open Source Projects</label>
+    <div class="row">
+        <template :key="project.id" x-for="project in myProjects">
+            <div class="col">
+                <div class="card">
+                    <div class="card-title"><a :href="project.link" x-text="project.title"></a></div>
+                    <div class="card-content" x-text="project.description"></div>
+                    <div class="card-footer">
+                        <a :href="project.link" class="btn-more">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+    <br>
+    <label class="proj-title">Open Source Contribution</label>
+    <div class="row">
+        <template :key="project.id" x-for="project in contribProject">
+            <div class="col">
+                <div class="card">
+                    <div class="card-title"><a :href="project.link" x-text="project.title"></a></div>
+                    <div class="card-content" x-text="project.description"></div>
+                    <div class="card-footer">
+                        <a :href="project.link" class="btn-more">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+</div>
+<footer class="footer">Design with @figma and built with @alpinejs | Harish Nandoliya</footer>
+<script defer src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.3/dist/alpine.min.js"></script>
+<script>
+    function userInfo() {
+        return {
+            name: 'Harish Nandoliya',
+            bio: 'Android and Web developer from india.',
+            github: 'https://github.com/harish81',
+            website: 'http://devharish.com/',
+            upwork: 'https://www.upwork.com/o/profiles/users/~0159bda3c658652fa4/'
+        };
+    }
+
+    function projects() {
+        return {
+            myProjects: [
+                {
+                    id: 1,
+                    title: "Code Generator",
+                    description: "Generate documents from templates, powered by handlebar.js",
+                    link: "https://harish81.github.io/codegen/",
+                },
+                {
+                    id: 2,
+                    title: "Android XML to Java",
+                    description: "Generate java view initialization code from xml.",
+                    link: "https://harish81.github.io/xmlgen/",
+                },
+                {
+                    id: 3,
+                    title: "Infyom Laravel GUI Schema Generator",
+                    description: "InfyOm Laravel GUI Schema Generator Built with React & Tailwind css.",
+                    link: "https://harish81.github.io/infyom-schema-generator/",
+                },
+                {
+                    id: 4,
+                    title: "Happy Search For Developer",
+                    description: "Happy Search is simple tool for searching information, resource over sites using site filters.",
+                    link: "https://harish81.github.io/happy-search/",
+                },
+                {
+                    id: 5,
+                    title: "DigiDocu",
+                    description: "Open Source Documents Management System Built with Laravel 6.",
+                    link: "https://github.com/harish81/digidocu",
+                },
+                {
+                    id: 6,
+                    title: "planckcss",
+                    description: "A minimal css framework based on miligram and flexbox grid.",
+                    link: "https://harish81.github.io/planckcss/",
+                },
+            ],
+            contribProject: [
+                {
+                    id: 1,
+                    title: "DigiDocu",
+                    description: "Random test data generator.",
+                    link: "https://github.com/benkeen/generatedata",
+                }
+            ],
+        };
+    }
+</script>
+</body>
+</html>
